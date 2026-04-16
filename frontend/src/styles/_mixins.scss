@@ -1,0 +1,62 @@
+@use "variables" as *;
+
+@mixin sm {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-6;
+  padding-right: $space-6;
+
+  @include lg {
+    padding-left: $space-10;
+    padding-right: $space-10;
+  }
+}
+
+@mixin btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $gold;
+  color: $black;
+  border: none;
+  border-radius: $radius-pill;
+  padding: $space-4 $space-8;
+  font-family: $font;
+  font-size: $text-sm;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@mixin section-heading {
+  font-size: $text-h2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  color: $black;
+}

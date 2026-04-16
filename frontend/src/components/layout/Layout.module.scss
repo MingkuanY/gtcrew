@@ -1,0 +1,14 @@
+@use "@/styles/variables" as *;
+
+.root {
+  overflow-x: hidden;
+}
+
+.pageWrapper {
+  transform: translateX(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shifted {
+  transform: translateX(-65vw);
+}

@@ -3,14 +3,16 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 
-import Layout from '@/components/layout/Layout'
+import Layout    from '@/components/layout/Layout'
+import HomePage  from '@/pages/HomePage'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
     children: [
-      // Pages added here as they are designed and implemented
+      { index: true, element: <HomePage /> },
+      // Additional pages added here as they are designed and implemented
     ],
   },
 ])
