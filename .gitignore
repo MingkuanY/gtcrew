@@ -107,3 +107,9 @@ venv.bak/
 .idea
 /static/
 /media/
+
+# Frontend (React / Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
