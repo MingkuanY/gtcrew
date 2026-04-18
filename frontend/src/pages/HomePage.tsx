@@ -10,6 +10,7 @@ import insta5 from '@/assets/insta-5.jpg'
 import insta6 from '@/assets/insta-6.jpg'
 import insta7 from '@/assets/insta-7.jpg'
 import insta8 from '@/assets/insta-8.jpg'
+import HeroSection from '@/components/HeroSection'
 import styles from './HomePage.module.scss'
 
 const INSTA_POSTS = [insta1, insta2, insta3, insta4, insta5, insta6, insta7, insta8]
@@ -17,18 +18,14 @@ const INSTA_POSTS = [insta1, insta2, insta3, insta4, insta5, insta6, insta7, ins
 export default function HomePage() {
   return (
     <div>
-      <section className={styles.hero}>
-        <img src={heroBg} alt="" className={styles.heroBg} />
-        <div className={styles.heroOverlay} />
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
-            <span className={styles.heroTitleGold}>Georgia Tech</span>
-            {' '}
-            <span className={styles.heroTitleWhite}>Rowing</span>
-          </h1>
-          <button className={styles.btn}>Learn More</button>
-        </div>
-      </section>
+      <HeroSection image={heroBg} imageAlt="" imagePosition="center 60%">
+        <h1 className={styles.heroTitle}>
+          <span className={styles.heroTitleGold}>Georgia Tech</span>
+          {' '}
+          <span className={styles.heroTitleWhite}>Rowing</span>
+        </h1>
+        <button className={styles.btn}>Learn More</button>
+      </HeroSection>
 
       <div className={styles.body}>
 

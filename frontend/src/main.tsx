@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 
-import Layout    from '@/components/layout/Layout'
-import HomePage  from '@/pages/HomePage'
+import Layout from '@/components/layout/Layout'
+import HomePage from '@/pages/HomePage'
+import ContactPage from '@/pages/ContactPage'
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
-      // Additional pages added here as they are designed and implemented
+      { path: 'contact', element: <ContactPage /> },
     ],
   },
 ])
