@@ -1,0 +1,108 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+// ── Hero ─────────────────────────────────────────────────────────────
+
+.heroTitle {
+  font-size: $text-hero;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: $shadow-hero-text;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @media (max-width: 900px) { font-size: 3.5rem; }
+  @media (max-width: 640px) {
+    font-size: 2.5rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+}
+
+.heroTitleGold  { color: $gold; }
+.heroTitleWhite { color: $white; }
+
+// ── Page body ─────────────────────────────────────────────────────────
+
+.content {
+  max-width: 57.5rem;
+  margin: 0 auto;
+  padding: $space-10 $space-8 $space-20;
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+
+  @media (max-width: 640px) {
+    padding: $space-8 $space-4 $space-16;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+}
+
+.sectionHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: $black;
+
+  @media (max-width: 640px) { font-size: 1.75rem; }
+}
+
+.bodyText {
+  font-size: $text-base;
+  line-height: 1.7;
+  color: rgba($black, 0.75);
+}
+
+// ── Form ──────────────────────────────────────────────────────────────
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-4;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input {
+  @include field-border;
+  width: 100%;
+  height: 3rem;
+  border-radius: $radius-pill;
+  padding: 0 $space-6;
+}
+
+.textarea {
+  @include field-border;
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: $space-4 $space-6;
+  resize: vertical;
+  min-height: 11rem;
+  line-height: 1.6;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: center;
+  padding-top: $space-4;
+}
+
+.btn {
+  @include btn-gold;
+}

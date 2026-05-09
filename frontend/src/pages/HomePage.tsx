@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import heroBg from '@/assets/hero-bg.jpg'
 import photo1 from '@/assets/photo-1.jpg'
 import photo2 from '@/assets/photo-2.jpg'
@@ -37,7 +38,7 @@ export default function HomePage() {
               champions as you make lifelong friendships, push yourself to new
               limits, and represent Georgia Tech.
             </p>
-            <button className={styles.btn}>Join Today</button>
+            <Link to="/join" className={styles.btn}>Join Today</Link>
           </div>
 
           <div className={styles.photo}>
