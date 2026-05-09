@@ -24,7 +24,7 @@ export default function HomePage() {
           {' '}
           <span className={styles.heroTitleWhite}>Rowing</span>
         </h1>
-        <button className={styles.btn}>Learn More</button>
+        <Link to="/about" className={styles.btn}>Learn More</Link>
       </HeroSection>
 
       <div className={styles.body}>

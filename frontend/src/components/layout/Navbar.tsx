@@ -21,7 +21,11 @@ export default function Navbar({ menuOpen, onToggle }: Props) {
           <ul className={styles.links}>
             {NAV_LINKS.map((l) => (
               <li key={l.href}>
-                <Link to={l.href} className={styles.link}>{l.label}</Link>
+                {l.external ? (
+                  <a href={l.href} target="_blank" rel="noopener noreferrer" className={styles.link}>{l.label}</a>
+                ) : (
+                  <Link to={l.href} className={styles.link}>{l.label}</Link>
+                )}
               </li>
             ))}
             <li>
@@ -48,16 +52,29 @@ export default function Navbar({ menuOpen, onToggle }: Props) {
           aria-hidden={!menuOpen}
         >
           <nav className={styles.menuNav}>
-            {NAV_LINKS.map((l) => (
-              <Link
-                key={l.href}
-                to={l.href}
-                className={styles.menuNavLink}
-                onClick={onToggle}
-              >
-                {l.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((l) =>
+              l.external ? (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.menuNavLink}
+                  onClick={onToggle}
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <Link
+                  key={l.href}
+                  to={l.href}
+                  className={styles.menuNavLink}
+                  onClick={onToggle}
+                >
+                  {l.label}
+                </Link>
+              )
+            )}
             <Link
               to="/donate"
               className={`${styles.menuNavLink} ${styles.menuNavLinkDonate}`}

@@ -65,7 +65,14 @@ export default function AboutPage() {
               <img src={history2} alt="GT Crew historical photo" />
             </div>
           </div>
-          <button className={styles.btn}>Read More</button>
+          <a
+            href="https://www.gtcrewalumni.org/history-of-gt-crew"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btn}
+          >
+            Read More
+          </a>
         </section>
 
       </div>
