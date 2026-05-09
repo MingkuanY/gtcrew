@@ -6,6 +6,7 @@ import './index.css'
 import Layout from '@/components/layout/Layout'
 import HomePage from '@/pages/HomePage'
 import ContactPage from '@/pages/ContactPage'
+import TeamPage from '@/pages/TeamPage'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'contact', element: <ContactPage /> },
+      { path: 'team', element: <TeamPage /> },
     ],
   },
 ])
