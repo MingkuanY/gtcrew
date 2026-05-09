@@ -1,6 +1,6 @@
 import heroContact from '@/assets/hero-contact.png'
 import HeroSection from '@/components/HeroSection'
-import { SOCIAL_LINKS } from '@/lib/socialLinks'
+import { SOCIAL_LINKS } from '@/shared/socialLinks'
 import styles from './ContactPage.module.scss'
 
 const EMAIL_CONTACTS = [

@@ -1,4 +1,4 @@
-import { SOCIAL_LINKS } from '@/lib/socialLinks'
+import { SOCIAL_LINKS } from '@/shared/socialLinks'
 import styles from './Footer.module.scss'
 
 export default function Footer() {

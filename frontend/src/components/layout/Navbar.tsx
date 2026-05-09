@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import gtLogo from '@/assets/gt-logo.png'
-import { NAV_LINKS } from '@/lib/navLinks'
+import { NAV_LINKS } from '@/shared/navLinks'
 import styles from './Navbar.module.scss'
 
 interface Props {
