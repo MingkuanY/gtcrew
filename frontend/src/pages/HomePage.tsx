@@ -1,7 +1,6 @@
 import heroBg from '@/assets/hero-bg.jpg'
 import photo1 from '@/assets/photo-1.jpg'
 import photo2 from '@/assets/photo-2.jpg'
-import photo3 from '@/assets/photo-3.jpg'
 import insta1 from '@/assets/insta-1.jpg'
 import insta2 from '@/assets/insta-2.jpg'
 import insta3 from '@/assets/insta-3.jpg'
@@ -64,23 +63,19 @@ export default function HomePage() {
           </div>
 
           <div className={styles.section}>
-            <h2 className={styles.sectionHeading}>The Regulator</h2>
-            <p className={styles.sectionBody}>
-              From regatta wins to new equipment, catch up with what the team
-              is up to!
-            </p>
-            <button className={styles.btn}>Read Regulator</button>
+            <div className={styles.subSection}>
+              <h2 className={styles.sectionHeading}>The Regulator</h2>
+              <p className={styles.sectionBody}>
+                From regatta wins to new equipment, catch up with what the team
+                is up to!
+              </p>
+              <button className={styles.btn}>Read Regulator</button>
+            </div>
+            <div className={styles.subSection}>
+              <h2 className={styles.sectionHeading}>Get on Our Mailing List</h2>
+              <button className={styles.btn}>Join Mailing List</button>
+            </div>
           </div>
-
-          <div className={styles.photo}>
-            <img src={photo3} alt="GT Rowing team" />
-          </div>
-
-          <div className={styles.section}>
-            <h2 className={styles.sectionHeading}>Get on Our Mailing List</h2>
-            <button className={styles.btn}>Join Mailing List</button>
-          </div>
-
         </div>
 
         <aside className={styles.instaColumn}>
