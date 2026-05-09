@@ -11,6 +11,7 @@ import TeamPage from '@/pages/TeamPage'
 import JoinPage from '@/pages/JoinPage'
 import JoinGTStudentPage from '@/pages/JoinGTStudentPage'
 import JoinProspectiveStudentPage from '@/pages/JoinProspectiveStudentPage'
+import RentARowerPage from '@/pages/RentARowerPage'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: 'join', element: <JoinPage /> },
       { path: 'join/gt-student', element: <JoinGTStudentPage /> },
       { path: 'join/prospective', element: <JoinProspectiveStudentPage /> },
+      { path: 'rent-a-rower', element: <RentARowerPage /> },
     ],
   },
 ])

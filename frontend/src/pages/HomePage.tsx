@@ -56,7 +56,7 @@ export default function HomePage() {
               them raise money for club dues, competition entry fees, and new
               equipment.
             </p>
-            <button className={styles.btn}>Rent a Rower</button>
+            <Link to="/rent-a-rower" className={styles.btn}>Rent a Rower</Link>
           </div>
 
           <div className={styles.photo}>
