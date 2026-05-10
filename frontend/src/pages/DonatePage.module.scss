@@ -1,0 +1,400 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+// ── Hero ─────────────────────────────────────────────────────────────
+
+.heroTitle {
+  font-size: $text-hero;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: $shadow-hero-text;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @media (max-width: 900px) { font-size: 3.5rem; }
+  @media (max-width: 640px) {
+    font-size: 2.5rem;
+    white-space: normal;
+  }
+}
+
+.heroTitleGold  { color: $gold; }
+.heroTitleWhite { color: $white; }
+
+// ── Page body ─────────────────────────────────────────────────────────
+
+.content {
+  padding: $space-10 $space-8 $space-20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-6;
+
+  @media (max-width: 640px) {
+    padding: $space-8 $space-4 $space-16;
+  }
+}
+
+// ── Step indicator ────────────────────────────────────────────────────
+
+.stepTrack {
+  display: flex;
+  align-items: flex-start;   // connectors get margin-top to center with circles
+  width: 100%;
+  max-width: 57.5rem;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-2;
+  flex-shrink: 0;
+}
+
+.stepCircle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid rgba($black, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font;
+  font-size: $text-sm;
+  font-weight: 700;
+  color: rgba($black, 0.35);
+  background: $white;
+}
+
+.stepActive {
+  border-color: $gold;
+  background: $gold;
+  color: $black;
+}
+
+.stepDone {
+  border-color: $gold;
+  background: $gold;
+  color: $black;
+}
+
+.stepLabel {
+  font-size: $text-xs;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba($black, 0.35);
+  text-align: center;
+  white-space: nowrap;
+
+  @media (max-width: 480px) {
+    display: none; // keep circles only on very small screens
+  }
+}
+
+.stepLabelActive {
+  color: $black;
+}
+
+// Connecting lines between circles.
+// margin-top: 1.25rem = half of 2.5rem circle height — vertically centers the line.
+.connector {
+  flex: 1;
+  height: 2px;
+  background: rgba($black, 0.15);
+  margin-top: 1.25rem;
+  min-width: $space-4;
+}
+
+.connectorDone {
+  background: $gold;
+}
+
+// ── Donation card ─────────────────────────────────────────────────────
+
+.donateCard {
+  width: 100%;
+  max-width: 57.5rem;
+  border: 2px solid $gold;
+  border-radius: $radius-box;
+  padding: $space-10 $space-8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-5;
+  text-align: center;
+
+  @media (max-width: 640px) {
+    padding: $space-8 $space-4;
+  }
+}
+
+.cardHeading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $black;
+  line-height: 1.2;
+
+  @media (max-width: 640px) { font-size: 1.75rem; }
+}
+
+.cardBody {
+  font-size: $text-base;
+  line-height: 1.7;
+  color: rgba($black, 0.75);
+  max-width: 42rem;
+}
+
+// ── Amount selection (Step 1) ─────────────────────────────────────────
+
+.amountGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $space-4;
+  width: 100%;
+  margin-top: $space-4;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.amountBtn {
+  background: rgba($gold, 0.3);
+  border: none;
+  border-radius: $radius-pill;
+  padding: $space-4 $space-5;
+  font-family: $font;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $black;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover {
+    background: rgba($gold, 0.5);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.amountSelected {
+  background: $gold;
+
+  &:hover {
+    background: $gold;
+  }
+}
+
+.amountOther {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-1;
+}
+
+.otherDollar {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.otherLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.customRow {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  max-width: 20rem;
+}
+
+.customPrefix {
+  font-family: $font;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $black;
+}
+
+.customInput {
+  flex: 1;
+  border: 2px solid $gold;
+  border-radius: $radius-pill;
+  background: transparent;
+  font-family: $font;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $black;
+  padding: $space-2 $space-5;
+  outline: none;
+  text-align: center;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-style: italic;
+    color: #aaa;
+  }
+}
+
+// ── Gift Review (Step 2) ──────────────────────────────────────────────
+
+.reviewTable {
+  width: 100%;
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  padding: $space-4 0;
+}
+
+.reviewRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviewLabel {
+  font-size: $text-base;
+  font-weight: 600;
+  color: rgba($black, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reviewAmount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $black;
+}
+
+.reviewDivider {
+  height: 2px;
+  background: $gold;
+  width: 100%;
+}
+
+.reviewTotalLabel {
+  font-size: $text-lg;
+  font-weight: 700;
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reviewTotalAmount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $black;
+}
+
+// ── Forms (Steps 3 & 4) ───────────────────────────────────────────────
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  text-align: left;
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-4;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input {
+  @include field-border;
+  border-width: 2px;
+  width: 100%;
+  height: 3rem;
+  border-radius: $radius-pill;
+  padding: 0 $space-6;
+  box-sizing: border-box;
+}
+
+// Donation amount reminder pill shown at top of Payment step
+.donationSummary {
+  font-size: $text-sm;
+  color: rgba($black, 0.65);
+  background: rgba($gold, 0.2);
+  border-radius: $radius-pill;
+  padding: $space-3 $space-6;
+  letter-spacing: 0.03em;
+
+  strong {
+    color: $black;
+    font-weight: 700;
+  }
+}
+
+// ── Navigation row (Back / Next) ──────────────────────────────────────
+
+.navRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: $space-4;
+  margin-top: $space-4;
+}
+
+// Used as the primary CTA — centered when alone, right-aligned inside .navRow
+.nextBtn {
+  @include btn-gold;
+  font-size: $text-sm;
+  padding: $space-4 $space-10;
+  letter-spacing: 0.1em;
+  margin-top: $space-4;
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  // Inside navRow the margin-top is not needed
+  .navRow & {
+    margin-top: 0;
+  }
+}
+
+.backBtn {
+  background: transparent;
+  border: none;
+  font-family: $font;
+  font-size: $text-sm;
+  font-weight: 600;
+  color: rgba($black, 0.45);
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: $space-3 0;
+
+  &:hover {
+    color: $black;
+  }
+}
