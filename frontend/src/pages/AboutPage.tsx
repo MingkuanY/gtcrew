@@ -9,7 +9,7 @@ import styles from './AboutPage.module.scss'
 export default function AboutPage() {
   return (
     <div>
-      <HeroSection image={aboutHero} imageAlt="GT Rowing team" imagePosition="center 40%">
+      <HeroSection image={aboutHero} imageAlt="GT Rowing team" imagePosition="center 35%" overlayOpacity={0.4} contentTop="calc(50vh - 2.5rem)">
         <h1 className={styles.heroTitle}>
           <span className={styles.heroTitleGold}>About</span>
           {' '}
