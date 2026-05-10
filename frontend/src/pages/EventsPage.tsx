@@ -389,7 +389,7 @@ function EventsSection({ title, events }: { title: string; events: EventItem[] }
 export default function EventsPage() {
   return (
     <div>
-      <HeroSection image={eventsHero} imageAlt="GT Rowing on the water" imagePosition="center 40%">
+      <HeroSection image={eventsHero} imageAlt="GT Rowing on the water" imagePosition="center 40%" overlayOpacity={0.4} contentTop="calc(50vh - 2.5rem)">
         <h1 className={styles.heroTitle}>
           <span className={styles.heroTitleGold}>Events</span>
         </h1>

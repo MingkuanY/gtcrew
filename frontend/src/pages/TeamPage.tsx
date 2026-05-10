@@ -19,7 +19,7 @@ const COACHES = [
   { name: 'Sophie Klessel', title: "Varsity Women's Assistant Coach", photo: coachSophie },
   { name: 'TBD', title: "Novice Men's Head Coach", photo: coachTBD },
   { name: 'Lauren Sabo', title: "Novice Women's Head Coach", photo: coachLauren },
-  { name: 'TBD', title: "Novice Men's Assistant Coach", photo: coachTBD},
+  { name: 'TBD', title: "Novice Men's Assistant Coach", photo: coachTBD },
   { name: 'Alli King', title: "Novice Women's Assistant Coach", photo: coachAlli },
 ]
 
@@ -29,7 +29,7 @@ export default function TeamPage() {
       <HeroSection
         image={heroTeam}
         imageAlt="GT Crew team at sunrise on the water"
-        imagePosition="center 40%"
+        imagePosition="center 30%"
         overlayOpacity={0.4}
         contentTop="calc(50vh - 2.5rem)"
       >
