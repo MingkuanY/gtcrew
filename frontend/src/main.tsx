@@ -6,6 +6,7 @@ import './index.css'
 import Layout from '@/components/layout/Layout'
 import HomePage from '@/pages/HomePage'
 import AboutPage from '@/pages/AboutPage'
+import EventsPage from '@/pages/EventsPage'
 import ContactPage from '@/pages/ContactPage'
 import TeamPage from '@/pages/TeamPage'
 import JoinPage from '@/pages/JoinPage'
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'about', element: <AboutPage /> },
+      { path: 'events', element: <EventsPage /> },
       { path: 'contact', element: <ContactPage /> },
       { path: 'team', element: <TeamPage /> },
       { path: 'join', element: <JoinPage /> },

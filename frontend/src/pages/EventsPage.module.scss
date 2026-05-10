@@ -1,0 +1,213 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.heroTitle {
+  font-size: $text-hero;
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: $shadow-hero-text;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @media (max-width: 900px) {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 2.5rem;
+    white-space: normal;
+  }
+}
+
+.heroTitleGold {
+  color: $gold;
+}
+
+// ── Page content ─────────────────────────────────────────────────────
+
+.content {
+  max-width: 57.5rem;
+  margin: 0 auto;
+  padding: $space-10 $space-8 $space-20;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 640px) {
+    padding: $space-8 $space-4 $space-16;
+  }
+}
+
+.sectionDivider {
+  border: none;
+  border-top: 1.5px solid rgba($black, 0.15);
+  margin: 0;
+}
+
+// ── Events section ────────────────────────────────────────────────────
+
+.eventsSection {
+  padding: $space-10 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: $space-6;
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $black;
+}
+
+.chevron {
+  color: $gold;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.chevronOpen {
+  transform: rotate(0deg);
+}
+
+.chevron:not(.chevronOpen) {
+  transform: rotate(-90deg);
+}
+
+// ── Event list ────────────────────────────────────────────────────────
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  border: none;
+  border-top: 1.5px solid rgba($black, 0.15);
+  margin: 0;
+}
+
+.eventRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $space-8;
+  padding: $space-8 0;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    gap: $space-4;
+  }
+}
+
+.eventMain {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.eventName {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: $black;
+  line-height: 1.2;
+}
+
+.eventDesc {
+  font-size: $text-base;
+  line-height: 1.7;
+  color: rgba($black, 0.75);
+}
+
+// ── Filmstrip carousel ────────────────────────────────────────────────
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  width: 100%;
+  margin-top: $space-4;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: $space-3;
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+}
+
+.carouselPhoto {
+  height: 220px;
+  width: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 2px;
+  display: block;
+}
+
+.arrowBtn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba($black, 0.2);
+  background: $white;
+  color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:hover {
+    background: $gold;
+    border-color: $gold;
+  }
+}
+
+// .arrowBtnLeft {
+//   left: $space-3;
+// }
+
+// .arrowBtnRight {
+//   right: $space-3;
+// }
+
+// ── Event meta (date + location) ──────────────────────────────────────
+
+.eventMeta {
+  flex-shrink: 0;
+  text-align: right;
+
+  @media (max-width: 640px) {
+    text-align: left;
+  }
+}
+
+.eventDate {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: $black;
+  white-space: nowrap;
+}
+
+.eventLocation {
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba($black, 0.75);
+  white-space: nowrap;
+}
