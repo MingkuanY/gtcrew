@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom' // Link kept for logo
 import gtLogo from '@/assets/gt-logo.png'
 import { NAV_LINKS } from '@/shared/navLinks'
 import styles from './Navbar.module.scss'
@@ -24,12 +24,22 @@ export default function Navbar({ menuOpen, onToggle }: Props) {
                 {l.external ? (
                   <a href={l.href} target="_blank" rel="noopener noreferrer" className={styles.link}>{l.label}</a>
                 ) : (
-                  <Link to={l.href} className={styles.link}>{l.label}</Link>
+                  <NavLink
+                    to={l.href}
+                    className={({ isActive }) => `${styles.link}${isActive ? ` ${styles.linkActive}` : ''}`}
+                  >
+                    {l.label}
+                  </NavLink>
                 )}
               </li>
             ))}
             <li>
-              <Link to="/donate" className={styles.linkDonate}>Donate</Link>
+              <NavLink
+                to="/donate"
+                className={({ isActive }) => `${styles.link}${isActive ? ` ${styles.linkActive}` : ''}`}
+              >
+                Donate
+              </NavLink>
             </li>
           </ul>
 
@@ -65,23 +75,23 @@ export default function Navbar({ menuOpen, onToggle }: Props) {
                   {l.label}
                 </a>
               ) : (
-                <Link
+                <NavLink
                   key={l.href}
                   to={l.href}
-                  className={styles.menuNavLink}
+                  className={({ isActive }) => `${styles.menuNavLink}${isActive ? ` ${styles.menuNavLinkActive}` : ''}`}
                   onClick={onToggle}
                 >
                   {l.label}
-                </Link>
+                </NavLink>
               )
             )}
-            <Link
+            <NavLink
               to="/donate"
-              className={`${styles.menuNavLink} ${styles.menuNavLinkDonate}`}
+              className={({ isActive }) => `${styles.menuNavLink}${isActive ? ` ${styles.menuNavLinkActive}` : ''}`}
               onClick={onToggle}
             >
               Donate
-            </Link>
+            </NavLink>
           </nav>
         </div>,
         document.body

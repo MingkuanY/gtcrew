@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import aboutHero from '@/assets/about-hero.jpg'
 import boathouse from '@/assets/about-boathouse.jpg'
 import history1 from '@/assets/about-history-1.jpg'
@@ -29,7 +30,7 @@ export default function AboutPage() {
             a part of a team, make the closest friends you&apos;ll have here at Tech, get in
             amazing shape, and experience something new.
           </p>
-          <button className={styles.btn}>Join Today</button>
+          <Link to="/join" className={styles.btn}>Join Today</Link>
         </section>
 
         <hr className={styles.divider} />

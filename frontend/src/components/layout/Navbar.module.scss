@@ -46,11 +46,7 @@
   color: $white;
 }
 
-.linkDonate {
-  font-size: $text-base;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.linkActive {
   color: $gold;
   position: relative;
   padding-bottom: $space-1;
@@ -155,6 +151,6 @@
   }
 }
 
-.menuNavLinkDonate {
+.menuNavLinkActive {
   color: $gold;
 }

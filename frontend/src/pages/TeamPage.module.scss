@@ -72,8 +72,8 @@
 }
 
 .coachPhoto {
-  width: 7rem;
-  height: 7rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   border: 6px solid $gold;
   object-fit: cover;
@@ -103,14 +103,11 @@
 
 .boardPhoto {
   width: 100%;
+  max-height: 28rem;
   display: block;
-  border-radius: $radius-card;
+  border-radius: 0;
   object-fit: cover;
   margin-bottom: $space-5;
-
-  @media (max-width: 640px) {
-    border-radius: $radius-box;
-  }
 }
 
 .boardCaption {

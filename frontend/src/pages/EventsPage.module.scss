@@ -99,10 +99,16 @@
 
 .eventRow {
   display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: $space-8 0;
+}
+
+.eventTop {
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: $space-8;
-  padding: $space-8 0;
 
   @media (max-width: 640px) {
     flex-direction: column;
@@ -141,12 +147,17 @@
   margin-top: $space-4;
 }
 
+.carouselViewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
 .carouselTrack {
   display: flex;
   gap: $space-3;
-  overflow: hidden;
-  flex: 1;
-  min-width: 0;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .carouselPhoto {
@@ -163,28 +174,24 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1.5px solid rgba($black, 0.2);
-  background: $white;
-  color: $black;
+  border: 1.5px solid $gold;
+  background: $gold;
+  color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: opacity 0.15s;
 
-  &:hover {
-    background: $gold;
-    border-color: $gold;
+  &:hover:not(:disabled) {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
   }
 }
-
-// .arrowBtnLeft {
-//   left: $space-3;
-// }
-
-// .arrowBtnRight {
-//   right: $space-3;
-// }
 
 // ── Event meta (date + location) ──────────────────────────────────────
 

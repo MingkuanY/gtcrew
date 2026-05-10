@@ -2,12 +2,12 @@ import heroTeam from '@/assets/hero-team.png'
 import coachBeth from '@/assets/coach-beth.png'
 import coachTim from '@/assets/coach-tim.png'
 import coachSarah from '@/assets/coach-sarah.png'
-import coachAlec from '@/assets/coach-alec.png'
-import coachMandy from '@/assets/coach-mandy.png'
-import coachCorey from '@/assets/coach-corey.png'
-import coachGayatri from '@/assets/coach-gayatri.png'
-import coachKiyah from '@/assets/coach-kiyah.png'
-import officerBoard from '@/assets/officer-board.png'
+import coachSophie from '@/assets/coach-sophie.png'
+import coachKarthik from '@/assets/coach-karthik.png'
+import coachLauren from '@/assets/coach-lauren.png'
+import coachAlli from '@/assets/coach-alli.png'
+import coachTBD from '@/assets/coach-tbd.png'
+import officerBoard from '@/assets/officer-board1.png'
 import HeroSection from '@/components/HeroSection'
 import styles from './TeamPage.module.scss'
 
@@ -15,11 +15,12 @@ const COACHES = [
   { name: 'Beth Thomas', title: "Varsity Women's Head Coach", photo: coachBeth },
   { name: 'Tim Pierce', title: "Varsity Men's Head Coach", photo: coachTim },
   { name: 'Sarah Nastasi', title: "Varsity Women's Assistant Coach", photo: coachSarah },
-  { name: 'Alec Kaye', title: "Varsity Men's Assistant Coach", photo: coachAlec },
-  { name: 'Mandy Heady', title: "Novice Women's Head Coach", photo: coachMandy },
-  { name: 'Corey Babb', title: "Novice Men's Head Coach", photo: coachCorey },
-  { name: 'Gayatri Menon', title: "Novice Women's Assistant Coach", photo: coachGayatri },
-  { name: 'Kiyah Sherman', title: "Novice Men's Assistant Coach", photo: coachKiyah },
+  { name: 'Karthik Krishnan', title: "Varsity Men's Assistant Coach", photo: coachKarthik },
+  { name: 'Sophie Klessel', title: "Varsity Women's Assistant Coach", photo: coachSophie },
+  { name: 'TBD', title: "Novice Men's Head Coach", photo: coachTBD },
+  { name: 'Lauren Sabo', title: "Novice Women's Head Coach", photo: coachLauren },
+  { name: 'TBD', title: "Novice Men's Assistant Coach", photo: coachTBD},
+  { name: 'Alli King', title: "Novice Women's Assistant Coach", photo: coachAlli },
 ]
 
 export default function TeamPage() {
@@ -59,20 +60,16 @@ export default function TeamPage() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionHeading}>2025 Officer Board</h2>
+          <h2 className={styles.sectionHeading}>2026 Officer Board</h2>
           <img
             src={officerBoard}
-            alt="2025 GT Crew Officer Board group photo"
+            alt="2026 GT Crew Officer Board group photo"
             className={styles.boardPhoto}
           />
           <p className={styles.boardCaption}>
-            <strong>Back row left to right</strong>: Shreeya Simha, Helen Honecker,
-            Shrayes Upadhyayula, Malcolm Ferguson, Rohan Prakash.
+            <strong>Left to Right:</strong> Alan Thomas Saju, Margaret Moe, Rohan Prakash, Malcolm Ferguson, Cooper Grant, Luke Harris, Will Dwyer, Leona Longhurst, Riley Hogan, Nicole Johnson, Kinzley Lebeda
             <br /><br />
-            <strong>Front row left to right</strong>: Natanel Ha, Sophie Andersen,
-            Saleema Manzoor, Margaret Moe, Alan Saju
-            <br /><br />
-            <strong>Not pictured</strong>: Stephen Harvey and Shrish Shetty
+            <strong>Not pictured:</strong> Spencer Smith
           </p>
         </section>
 
