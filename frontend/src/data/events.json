@@ -1,0 +1,54 @@
+{
+  "upcoming": [
+    {
+      "name": "ACRA Championships",
+      "description": "ACRA is the national championship regatta for collegiate club rowing and the final race of our season.",
+      "date": "May 15-17, 2026",
+      "location": "Oak Ridge, TN"
+    }
+  ],
+  "past": [
+    {
+      "name": "Atlanta Erg Sprints",
+      "description": "GT Crew opened 2k season at this indoor rowing competition hosted at Georgia Tech.",
+      "date": "Feb 7, 2026",
+      "location": "Atlanta, GA",
+      "photos": []
+    },
+    {
+      "name": "MSU Scrimmage",
+      "description": "GT Crew gained early-season race experience against several collegiate programs at Clemson.",
+      "date": "Mar 7, 2026",
+      "location": "Clemson, SC",
+      "photos": []
+    },
+    {
+      "name": "Spring Break Training Trip",
+      "description": "GT Crew spent the week at Lake Lure building fitness, technique, and most importantly team spirit.",
+      "date": "Mar 22-28, 2026",
+      "location": "Lake Lure, NC",
+      "photos": []
+    },
+    {
+      "name": "SIRA Regatta",
+      "description": "GT Crew competed at one of the Southeast’s major spring collegiate regattas.",
+      "date": "Apr 17-19, 2026",
+      "location": "Oak Ridge, TN",
+      "photos": []
+    },
+    {
+      "name": "Head of the South",
+      "description": "GT Crew raced in one of the final head races of the fall season.",
+      "date": "Nov 9, 2024",
+      "location": "Augusta, GA",
+      "photos": ["/events/hots-1.jpg", "/events/hots-2.jpg", "/events/hots-1.jpg", "/events/hots-2.jpg"]
+    },
+    {
+      "name": "Head of the Hooch",
+      "description": "GT Crew competed in one of the largest fall rowing regattas in the country.",
+      "date": "Nov 2, 2024",
+      "location": "Chattanooga, TN",
+      "photos": ["/events/hooch-1.jpg", "/events/hooch-2.jpg", "/events/hooch-1.jpg", "/events/hooch-2.jpg"]
+    }
+  ]
+}
